@@ -37,9 +37,9 @@ elif device == "cpu":
 
 # Run the ui
 if device == "cuda":
-    subprocess.run(["python", "ff.py", "run", "--execution-providers", "cuda"], check=True)
+    subprocess.run(["python", "fs.py", "run", "--execution-providers", "cuda"], check=True)
 elif device == "cpu":
-    subprocess.run(["python", "ff.py", "run", "--execution-providers", "cpu"], check=True)
+    subprocess.run(["python", "fs.py", "run", "--execution-providers", "cpu"], check=True)
 
 
 # Launch the interface with share=True
