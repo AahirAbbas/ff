@@ -12,7 +12,7 @@ else:
 # Check if facefusion directory exists
 if not os.path.exists("facefusion"):
     # Clone the repository
-    subprocess.run(["git", "clone", "https://github.com/facefusion/facefusion", "--single-branch"], check=True)
+    subprocess.run(["git", "clone", "https://github.com/AahirAbbas/ff", "--single-branch"], check=True)
 else:
     print("facefusion directory already exists. Skipping git clone.")
 
@@ -23,7 +23,7 @@ os.chdir("facefusion")
 # ... (rest of your code)
 
 # Clone the repository
-subprocess.run(["git", "clone", "https://github.com/facefusion/facefusion", "--single-branch"], check=True)
+subprocess.run(["git", "clone", "https://github.com/AahirAbbas/ff", "--single-branch"], check=True)
 # chande directory to face fusion to run ui
 os.chdir("facefusion")
 
@@ -37,9 +37,9 @@ elif device == "cpu":
 
 # Run the ui
 if device == "cuda":
-    subprocess.run(["python", "facefusion.py", "run", "--execution-providers", "cuda"], check=True)
+    subprocess.run(["python", "ff.py", "run", "--execution-providers", "cuda"], check=True)
 elif device == "cpu":
-    subprocess.run(["python", "facefusion.py", "run", "--execution-providers", "cpu"], check=True)
+    subprocess.run(["python", "ff.py", "run", "--execution-providers", "cpu"], check=True)
 
 
 # Launch the interface with share=True
